@@ -29,6 +29,8 @@ fmt安装8.1.1
 sophus安装main.1.x
 pangolin版本暂未确定
 
+直接clone的代码中catkin_simple功能宝文件夹为空，需要自行从别的地方下载
+
 ### 代码修改：
 
 代码需要在nocap.h的头加入  
