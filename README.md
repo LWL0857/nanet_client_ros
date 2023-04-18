@@ -27,9 +27,11 @@ ros_natnet_client-master
 fmt安装8.1.1
 
 sophus安装main.1.x
-pangolin版本暂未确定
+pangolin版本v0.3
 
-直接clone的代码中catkin_simple功能宝文件夹为空，需要自行从别的地方下载
+直接clone的代码中catkin_simple功能包文件夹为空，需要自行从别的地方下载
+
+clone得到的代码中和catkin_simple同级的cmakelist.txt文件需要删除
 
 ### 代码修改：
 
