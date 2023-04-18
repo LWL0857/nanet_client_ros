@@ -22,16 +22,24 @@ ros_natnet_client-master
         └── ros_natnet_client.cpp
 ```
 
+### 环境依赖：
 
-  fmt安装8.1.1
-   sophus安装main.1.x
-    pangolin版本
+fmt安装8.1.1
+
+sophus安装main.1.x
+pangolin版本暂未确定
+
+### 代码修改：
+
 代码需要在nocap.h的头加入  
 #define FMT_HEADER_ONLY
 #include "fmt/format.h"
 在camkelist.txt里面需要对加入fmt依赖
 find_package(FMT REQUIRED)
 target_link_libraries(ros_natnet_client Mocap ${catkin_LIBRARIES} NatNet.so ${Pangolin_LIBRARIES}  fmt)
+
+### 其他注意：
+
 libnatnet.so 需要软连接 到usr/lib 而不是直接cp
 1.首先建立workspace/src
 2.把ros_natnet_client放入src，
@@ -40,7 +48,6 @@ libnatnet.so 需要软连接 到usr/lib 而不是直接cp
 5.catkin_build 在workspace下
 6.source devel/setup.bash
 7.roslaunch ros_natnet_client  *****.launch
-
 
 auto wlan0
 allow-hotplug wlan0 # wlan0 WiFi card number
@@ -54,7 +61,5 @@ wpa-ssid "longmen-2016"
 wpa-psk "longmen317" 
 
 
-basalt_capture_mocap
-是通过创建
-SSS
+
 
